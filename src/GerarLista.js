@@ -33,7 +33,7 @@ function Ordenar(lista, ordem, ListaFiltros, inner_search, [começo, fim]) {  //
     return (
       <a key={membro.name} href={'http://www.twitch.tv/' + membro.name} target="_blank"  rel="noreferrer" className='rightBox_card_click'>
         <div className='rightBox_card_content'>
-          <img src={'https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg'} width='70rem' alt='' className='rightBox_card_content_icon' />
+          <img src={membro.icon} width='70rem' alt='' className='rightBox_card_content_icon' />
           <div className="rightBox_card_content_name">{membro.name}</div>
           <div className="rightBox_card_content_followers"><span className="material-symbols-outlined">person</span><span>:{membro.followers}</span></div>
         </div>
