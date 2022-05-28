@@ -10,7 +10,7 @@ import {FetchMods} from "./FetchMods";
 
 function App() {
   //declarações iniciais
-  const [searchArea, setSearchArea]= useState('luki302');
+  const [searchArea, setSearchArea]= useState('');
   const searchAreaRef = useRef(null);
 
   const [inner_search, setInner_search] = useState('');
@@ -19,8 +19,7 @@ function App() {
   const [IsCheckedMulheres, setIsCheckedMulheres] = useState(false); 
   const [IsCheckedHomens, setIsCheckedHomens] = useState(false); 
   const [ListaFiltros, setListaFiltros]= useState([IsCheckedPartner, IsCheckedMulheres, IsCheckedHomens]);
-  
-  const [ordem, setOrdem] = useState(1);
+  const [ordem, setOrdem] = useState('1');
 
   var lista = '';
   // fim das declarações inicias
@@ -54,7 +53,6 @@ function App() {
   const handleSearch = (e) =>{
     e.preventDefault();
     setSearchArea(searchAreaRef.current.value);
-
   }
               //lida com os filtros
   function handleChangeFiltros(filtro, status)
