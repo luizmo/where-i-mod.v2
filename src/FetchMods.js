@@ -34,7 +34,7 @@ function FetchMods(usuario) {
             if (arrayIcon !== null) {
             arrayIcon.sort((a, b) => { return a.login.localeCompare(b.login) })
             // setLista(Object.assign(listaAux, arrayIcon))
-            setLista(listaAux.map((n, index) => ({ ...n, icon: arrayIcon[1].profile_image_url })))
+            setLista(listaAux.map((n, index) => ({ ...n, icon: arrayIcon[index].profile_image_url })))
         }
     }, [arrayIcon])
     
